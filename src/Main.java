@@ -1,4 +1,4 @@
-import AssignmentSolutions.*;  // Import all classes from AssignmentSolutions package
+import Assignment_Solutions.*;  // Import all classes from Assignment_Solutions package
 import java.util.Calendar;
 
 
