@@ -18,4 +18,11 @@ public interface TransactionInterface {
     // Method to apply the transaction to a bank account
     // Throws InsufficientFundsException if the transaction cannot be completed due to insufficient funds
     void apply(BankAccount ba) throws InsufficientFundsException;
+
+    /**
+     * Reverses the transaction if applicable.
+     - @param ba The BankAccount to which the transaction was applied.
+     - @return true if the transaction was reversed successfully, false otherwise.
+     */
+    boolean reverse(BankAccount ba);
 }
