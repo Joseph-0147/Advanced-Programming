@@ -12,6 +12,8 @@ import java.util.Calendar;
  -> Design Considerations:
  - Specifications define the Requires and Produces interfaces.
  - Implements abstraction through BaseTransaction.
+
+  @author Joseph Kariuki
  */
 public class DepositTransaction extends BaseTransaction {
 

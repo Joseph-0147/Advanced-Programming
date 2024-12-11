@@ -5,8 +5,10 @@ import java.util.Calendar;
 
 /**
  BaseTransaction Class
- This class provides a foundation for all transaction types.
- It implements the TransactionInterface and defines common methods.
+ - This class provides a foundation for all transaction types.
+ - It implements the TransactionInterface and defines common methods.
+
+  @author Joseph Kariuki
  */
 public class BaseTransaction implements TransactionInterface {
     private final double amount;

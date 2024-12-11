@@ -6,8 +6,10 @@ import java.util.Calendar;
  /**
  WithdrawalTransaction Class
 
- This class models a Withdrawal Transaction on a bank account.
- It allows withdrawals, checks for sufficient funds, and permits reversal of the transaction.
+  - This class models a Withdrawal Transaction on a bank account.
+  - It allows withdrawals, checks for sufficient funds, and permits reversal of the transaction.
+
+   @author Joseph Kariuki
  */
 public class WithdrawalTransaction extends BaseTransaction {
      private boolean reversed = false; // Indicates if the transaction has been reversed.
