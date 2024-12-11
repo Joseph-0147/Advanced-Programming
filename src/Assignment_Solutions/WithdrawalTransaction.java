@@ -4,10 +4,10 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Calendar;
 
  /**
- WithdrawalTransaction Class
+ * WithdrawalTransaction Class
 
-  - This class models a Withdrawal Transaction on a bank account.
-  - It allows withdrawals, checks for sufficient funds, and permits reversal of the transaction.
+  * - This class models a Withdrawal Transaction on a bank account.
+  * - It allows withdrawals, checks for sufficient funds, and permits reversal of the transaction.
 
    @author Joseph Kariuki
  */
@@ -84,8 +84,8 @@ public class WithdrawalTransaction extends BaseTransaction {
      }
 
          /**
-          Prints the details of the withdrawal transaction.
-          Includes the amount, date, and transaction ID.
+          * Prints the details of the withdrawal transaction.
+          * Includes the amount, date, and transaction ID.
           */
          @Override
          public void printTransactionDetails(){

@@ -4,9 +4,9 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Calendar;
 
 /**
- BaseTransaction Class
- - This class provides a foundation for all transaction types.
- - It implements the TransactionInterface and defines common methods.
+ * BaseTransaction Class
+ * - This class provides a foundation for all transaction types.
+ * - It implements the TransactionInterface and defines common methods.
 
   @author Joseph Kariuki
  */
@@ -18,12 +18,12 @@ public class BaseTransaction implements TransactionInterface {
     /**
      * Constructor: BaseTransaction
 
-     -> Requires:
-     - @param amount A positive double, representing the transaction amount. Must be > 0.
-     - @param date A non-null Calendar object representing the transaction date.
-     - @throws IllegalArgumentException if amount <= 0 or date is null.
-     -> Produces:
-     - Initializes a BaseTransaction with the specified amount and date.
+     * Requires:
+     * @param amount A positive double, representing the transaction amount. Must be > 0.
+     * @param date A non-null Calendar object representing the transaction date.
+     * @throws IllegalArgumentException if amount <= 0 or date is null.
+     * Produces:
+     * Initializes a BaseTransaction with the specified amount and date.
      */
     public BaseTransaction(double amount, @NotNull Calendar date) {
         if (amount <= 0) throw new IllegalArgumentException("Transaction amount must be positive.");
@@ -35,10 +35,10 @@ public class BaseTransaction implements TransactionInterface {
     }
 
     /**
-     getAmount()
-     @return double - The amount associated with the transaction.
-     -> Produces:
-     - Returns a positive double representing the transaction amount.
+     * getAmount()
+     * @return double - The amount associated with the transaction.
+     * Produces:
+     * - Returns a positive double representing the transaction amount.
      */
     @Override
     public double getAmount() {
@@ -46,11 +46,11 @@ public class BaseTransaction implements TransactionInterface {
     }
 
     /**
-     getDate()
-     @return A defensive copy of the transaction date.
-     -> Produces:
+     * getDate()
+     * @return A defensive copy of the transaction date.
+     * Produces:
 
-     - Returns a Calendar object representing the transaction date.
+     * - Returns a Calendar object representing the transaction date.
      */
     @Override
     public Calendar getDate() {
@@ -58,10 +58,10 @@ public class BaseTransaction implements TransactionInterface {
     }
 
     /**
-     getTransactionID()
-     @return The unique transaction ID.
-     -> Produces:
-     - Returns a String representing the unique ID for this transaction.
+     * getTransactionID()
+     * @return The unique transaction ID.
+     * Produces:
+     * - Returns a String representing the unique ID for this transaction.
      */
     @Override
     public String getTransactionID() {
@@ -70,10 +70,10 @@ public class BaseTransaction implements TransactionInterface {
 
     /**
      * apply(BankAccount ba)
-     - Applies the transaction to a given BankAccount.
+     * - Applies the transaction to a given BankAccount.
 
-     - @param ba A non-null BankAccount object.
-     - @throws UnsupportedOperationException if the method is called directly on BaseTransaction.
+     * @param ba A non-null BankAccount object.
+     * @throws UnsupportedOperationException if the method is called directly on BaseTransaction.
      */
     @Override
     public void apply(BankAccount ba) throws InsufficientFundsException {
@@ -82,11 +82,11 @@ public class BaseTransaction implements TransactionInterface {
 
     /**
      * reverse(BankAccount ba)
-     - Attempts to reverse the transaction.
+     * - Attempts to reverse the transaction.
 
-     - @param ba A non-null BankAccount object.
-     - @return boolean - Returns true if the transaction is reversed successfully.
-     - @throws UnsupportedOperationException if reverse is not supported by the transaction type.
+     * @param ba A non-null BankAccount object.
+     * @return boolean - Returns true if the transaction is reversed successfully.
+     * @throws UnsupportedOperationException if reverse is not supported by the transaction type.
      */
     @Override
     public boolean reverse(BankAccount ba) {
@@ -94,11 +94,11 @@ public class BaseTransaction implements TransactionInterface {
     }
 
     /**
-      printTransactionDetails()
+      * printTransactionDetails()
 
-      Prints details of the transaction.
-     -> Produces:
-     - Outputs transaction type, ID, amount, and date to the console.
+      * Prints details of the transaction.
+      *  Produces:
+      * - Outputs transaction type, ID, amount, and date to the console.
      */
     @Override
     public void printTransactionDetails() {
@@ -109,7 +109,7 @@ public class BaseTransaction implements TransactionInterface {
 
     /**
      * generateTransactionID()
-     Generates a unique identifier for this transaction.
+     * -Generates a unique identifier for this transaction.
      @return String - A unique transaction ID.
      */
     private String generateTransactionID() {
